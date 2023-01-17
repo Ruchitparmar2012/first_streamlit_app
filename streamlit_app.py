@@ -15,5 +15,4 @@ fruits_selected = st.multiselect('Pick Some Fruits:',list(my_fruit_list.index),[
 fruits_to_show=my_fruit_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 
-st.header("Fruityvice Fruit Advice!")
 
