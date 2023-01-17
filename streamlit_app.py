@@ -16,13 +16,14 @@ fruits_to_show=my_fruit_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 
 st.header("Fruityvice Fruit Advice!")
-
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 # import requests
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "Kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 st.text(fruityvice_response.json())
 
 # write your own comment -what does the next line do? 
